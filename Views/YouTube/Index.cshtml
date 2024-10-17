@@ -1,0 +1,58 @@
+﻿@model List<YouTubeApiProject.Models.YouTubeVideoModel>
+
+<style>
+    /* Center the form both vertically and horizontally */
+    .centered-form {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    /* Optional: Add some padding to the input fields */
+    .centered-form input[type="text"] {
+        padding: 10px;
+        width: 300px;
+        margin-right: 10px;
+    }
+    .centered-form button {
+        padding: 10px 20px;
+    }
+</style>
+
+
+<h2 class="text-center mb-4">Search YouTube Videos</h2>
+<form asp-action="Search" method="post" class="d-flex justify-content-center">
+    <input type="text" name="query" placeholder="Search for videos..." />
+    <button type="submit">Search</button>
+</form>
+
+@if (Model != null && Model.Any())
+{
+    <div class="container">
+        <div class="row justify-content-center">
+            @foreach (var video in Model) // Assuming Model is a list of video objects
+            {
+                <div class="col-md-6 col-lg-4 mb-4 d-flex justify-content-center">
+                    <div class="card text-center" style="max-width: 540px;">
+                        <!-- Video Thumbnail -->
+                        <img src="@video.ThumbnailUrl" class="card-img-top img-fluid" alt="@video.Title" style="max-height: 300px; object-fit: cover;">
+
+                        <div class="card-body">
+                            <!-- Video Title -->
+                            <h5 class="card-title">@video.Title</h5>
+
+                            <!-- Video Description -->
+                            <p class="card-text">@video.Description</p>
+
+                            <!-- Watch Button -->
+                            <a href="@video.VideoUrl" target="_blank" class="btn btn-info">Watch</a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+
+}
+<br />
+<br />

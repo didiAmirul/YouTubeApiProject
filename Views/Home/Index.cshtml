@@ -1,0 +1,107 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<style>
+    /* Make the cards smaller */
+    .smaller-card {
+        max-width: 250px; /* Adjust width of the card */
+        margin: 0 auto; /* Center the card in its column */
+        border-radius: 8px; /* Optional: round the card edges */
+    }
+
+    /* Make the images smaller */
+    .smaller-img {
+        max-height: 180px; /* Adjust the image height */
+        object-fit: cover; /* Ensures the image fits nicely */
+        width: 100%; /* Ensure the image takes up the full width */
+        border-radius: 8px 8px 0 0; /* Optional: rounded top corners */
+    }
+
+    /* Adjust the spacing between the cards */
+    .card {
+        margin-bottom: 20px;
+    }
+</style>
+
+<div class="text-center">
+    <h1 class="display-4">Welcome To YouTube API</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<!-- Genre Section -->
+<div class="genre-section mt-5">
+    <h3>Genre Videos</h3>
+    <div class="row">
+        <!-- Genre Video 1 -->
+        <div class="col-md-4">
+            <div class="card text-center smaller-card">
+                <img src="~/img/pop.jpg" class="card-img-top smaller-img" alt="Genre Video 1">
+                <div class="card-body">
+                    <h5 class="card-title">Pop</h5>
+                </div>
+            </div>
+        </div>
+
+        <!-- Genre Video 2 -->
+        <div class="col-md-4">
+            <div class="card text-center smaller-card">
+                <img src="~/img/rock.jpg" class="card-img-top smaller-img" alt="Genre Video 2">
+                <div class="card-body">
+                    <h5 class="card-title">Rock</h5>
+                </div>
+            </div>
+        </div>
+
+        <!-- Genre Video 3 -->
+        <div class="col-md-4">
+            <div class="card text-center smaller-card">
+                <img src="~/img/hiphop.jpg" class="card-img-top smaller-img" alt="Genre Video 3">
+                <div class="card-body">
+                    <h5 class="card-title">HipHop</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Trending Section -->
+<div class="trending-section mt-5">
+    <h3>Trending Videos</h3>
+    <div class="row">
+        <!-- Trending Video 1 -->
+        <div class="col-md-4">
+            <div class="card text-center smaller-card">
+                <img src="~/img/trending1.jpg" class="card-img-top smaller-img" alt="Trending Video 1">
+                <div class="card-body">
+                    <h5 class="card-title">Trending Video 1</h5>
+                </div>
+            </div>
+        </div>
+
+        <!-- Trending Video 2 -->
+        <div class="col-md-4">
+            <div class="card text-center smaller-card">
+                <img src="~/img/trending2.jpg" class="card-img-top smaller-img" alt="Trending Video 2">
+                <div class="card-body">
+                    <h5 class="card-title">Trending Video 2</h5>
+                </div>
+            </div>
+        </div>
+
+        <!-- Trending Video 3 -->
+        <div class="col-md-4">
+            <div class="card text-center smaller-card">
+                <img src="~/img/trending3.jpg" class="card-img-top smaller-img" alt="Trending Video 3">
+                <div class="card-body">
+                    <h5 class="card-title">Trending Video 3</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br />
+<br />
+
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
